@@ -330,6 +330,7 @@ const P = {
 
     // 결과 표시
     resultDiv.textContent = isEq ? "Equivalent (10점)" : `Not Equivalent (${score}점)`;
+    return score;
   }
 
   function calculateScore(isEquivalent, P, X) {

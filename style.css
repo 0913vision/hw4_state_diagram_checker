@@ -110,3 +110,23 @@ input:focus {
   outline: 2px solid #ffcc00;
   background-color: #555;
 }
+
+.fixed-back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.fixed-back-button:hover {
+  background-color: #555;
+}

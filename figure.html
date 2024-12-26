@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Figure Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="figure.css">
+</head>
+<body>
+  <a href="/" class="fixed-back-button">&lt; 처음으로</a>
+  <div id="toolbar">
+    <button id="btnP" class="active" onclick="activateP()">15(d)</button>
+    <button id="btnQ" onclick="activateQ()">15(g)</button>
+  </div>
+  <div id="help">우상단에서 문제선택<br> A, B, C, D, E: 상태추가/이동<br> S: 전이 추가/수정 (출발상태, 도착상태 클릭)ㅁ<br> F5: 초기화</div>
+  <div id="canvas"></div>
+  <!-- <script src="script.js" type="module"></script> -->
+  <script src="figure.js"></script>
+</body>
+</html>
