@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (isPopupOpen) {
       const key = e.key.toUpperCase();
-      if ((key >= "A" && key <= "I") || key === "S") {
+      if ((key >= "A" && key <= "J") || key === "S") {
         e.preventDefault();
         return;
       }
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const key = e.key.toUpperCase();
-    if (!["A", "B", "C", "D", "E", "F", "G", "H","I", "S"].includes(key)) return;
+    if (!["A", "B", "C", "D", "E", "F", "G", "H","I", "J","S"].includes(key)) return;
 
     if (key === "S") {
       startLineDrawing();
