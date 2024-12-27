@@ -178,13 +178,14 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    console.log(e.key);
+
     if (e.key === "Escape") {
       cancelCurrentAction();
       return;
     }
 
     const key = e.key.toUpperCase();
-    console.log(key)
     if (!["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "S"].includes(key)) return;
 
     if (key === "S") {
