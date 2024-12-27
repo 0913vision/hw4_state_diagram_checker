@@ -184,7 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const key = e.key.toUpperCase();
-    if (!["A", "B", "C", "D", "E", "F", "G", "H","I", "J","S"].includes(key)) return;
+    console.log(key)
+    if (!["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "S"].includes(key)) return;
 
     if (key === "S") {
       startLineDrawing();
