@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 키보드 입력 처리
   document.addEventListener("keydown", (e) => {
+    // console.log(e.key);
     if (isPopupOpen) {
       const key = e.key.toUpperCase();
       if ((key >= "A" && key <= "J") || key === "S") {
@@ -178,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    console.log(e.key);
 
     if (e.key === "Escape") {
       cancelCurrentAction();
