@@ -454,6 +454,41 @@ function setupPopupEventListeners(overlay, line) {
         }
     };
 
+    // 키보드 입력 처리
+    const handleKeydown = (event) => {
+      switch (event.key) {
+          case '1': // x = 0
+              selectedX = "0";
+              updateSelectedButton(popup.querySelector('#input-x'), "0");
+              break;
+          case '2': // x = 1
+              selectedX = "1";
+              updateSelectedButton(popup.querySelector('#input-x'), "1");
+              break;
+          case '3': // z = 0
+              selectedZ = "0";
+              updateSelectedButton(popup.querySelector('#input-z'), "0");
+              break;
+          case '4': // z = 1
+              selectedZ = "1";
+              updateSelectedButton(popup.querySelector('#input-z'), "1");
+              break;
+          case 'Enter': // 제출
+          case ' ':
+              handleSubmit();
+              break;
+          default:
+              break;
+      }
+  };
+  // 키보드 이벤트 리스너 추가
+  document.addEventListener('keydown', handleKeydown);
+
+  // 팝업 닫힐 때 키보드 이벤트 리스너 제거
+  overlay.addEventListener('remove', () => {
+      document.removeEventListener('keydown', handleKeydown);
+  });
+
     popup.querySelectorAll('.input-button').forEach(button => {
         button.addEventListener('click', handleButtonClick);
     });
