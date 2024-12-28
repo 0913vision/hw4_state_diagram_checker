@@ -474,7 +474,9 @@ function setupPopupEventListeners(overlay, line) {
               updateSelectedButton(popup.querySelector('#input-z'), "1");
               break;
           case 'Enter': // 제출
-          case ' ':
+              handleSubmit();
+              break;
+          case ' ': // 제출
               handleSubmit();
               break;
           default:
