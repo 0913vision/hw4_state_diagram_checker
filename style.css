@@ -99,17 +99,28 @@ input {
   box-sizing: border-box;
   font-size: 25px;
 }
-
 input:read-only {
-  background-color: #555;
+  background-color: #444;
   color: #aaa;
   border: none;
 }
 
-input:focus {
-  outline: 2px solid #ffcc00;
+input.selected-state {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+
+input:focus:not(.selected-state) {
+  outline: 2px solid #ffbb00;
   background-color: #555;
 }
+
+input:focus.selected-state {
+  outline: 0px solid #ffbb00;
+}
+
+
 
 .fixed-back-button {
   position: fixed;
